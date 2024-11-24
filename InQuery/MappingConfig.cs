@@ -12,10 +12,11 @@ namespace InQuiry
         {
           
             #region Balance
-            CreateMap<BalanceDto, Balance>()
-                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.token_url))
-                .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.balance))
-                .ForMember(dest => dest.TokenName, opt => opt.MapFrom(src => src.token_name));
+            CreateMap<Balance, BalanceDto>().ReverseMap();
+            //CreateMap<BalanceDto, Balance>()
+            //    .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.token_url))
+            //    .ForMember(dest => dest.Amount, opt => opt.MapFrom(src => src.balance))
+            //    .ForMember(dest => dest.TokenName, opt => opt.MapFrom(src => src.token_name));
             #endregion
 
         }

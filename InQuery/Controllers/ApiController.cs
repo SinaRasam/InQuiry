@@ -6,17 +6,8 @@ namespace InQuiry.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ApiController : ControllerBase
+    public class ApiController(ILogger<ApiController> logger, IBalanceService _balanceService) : ControllerBase
     {
-        private readonly ILogger<ApiController> _logger;
-        private readonly IBalanceService _balanceService;
-
-        public ApiController(ILogger<ApiController> logger, IBalanceService balanceService)
-        {
-            _logger = logger;
-            _balanceService = balanceService;
-        }
-
         [HttpGet("[action]")]
         public async Task<APIResult<List<BalanceDto>>> GetApi([FromQuery] string address)
         {

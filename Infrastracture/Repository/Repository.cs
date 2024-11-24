@@ -11,11 +11,6 @@ namespace Infrastracture.Repository
 {
     public class Repository:IRepository
     {
-        //private readonly MyDbContext _db;
-        public Repository()
-        {
-        }
-
         public Task AddAsync(Balance balance)
         {
             var path = Path.Combine(Directory.GetCurrentDirectory(), "ErrorLogs");

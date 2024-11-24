@@ -9,16 +9,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace InQuiry.Services
 {
-    public class BalanceService : IBalanceService
+    public class BalanceService(IMapper _mapper, IRepository _repository) : IBalanceService
     {
-        private readonly IMapper _mapper;
-        private readonly IRepository _repository;
-        public BalanceService(IMapper mapper, IRepository repository)
-        {
-            _mapper = mapper;
-            _repository = repository;
-        }
-
         public async Task<APIResult<List<BalanceDto>>> GetApiAsync(string address)
         {
             var result = new APIResult<List<BalanceDto>>();
@@ -51,9 +43,6 @@ namespace InQuiry.Services
                 result.StatusCode = HttpStatusCode.BadRequest;
             }
             return result;
-
-            //? address = TSTVYwFDp7SBfZk7Hrz3tucwQVASyJdwC7 & asset_type = 0
-
         }
     }
 }

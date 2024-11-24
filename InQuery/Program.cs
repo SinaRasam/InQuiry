@@ -2,6 +2,7 @@ using Infrastracture.Repository;
 using InQuiry;
 using InQuiry.Services;
 using InQuiry;
+using InQuiry.Extentions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddTransient<IBalanceService, BalanceService>();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
-builder.Services.AddCronJob<ServiceCall>();
+builder.Services.RegisterBackgroundServices();
+
 
 var app = builder.Build();
 

@@ -1,24 +1,16 @@
 ﻿using Infrastracture.Repository;
 using InQuiry.Services;
+using Quartz;
 
 namespace InQuiry
 {
-
-    public class ServiceCall : CronJobExtensions
+    [DisallowConcurrentExecution]
+    public class ServiceCall(IBalanceService balanceService) : IJob
     {
-        public ServiceCall(IServiceProvider serviceProvider)
-         : base(serviceProvider)
+        public async Task Execute(IJobExecutionContext context)
         {
-        }
-
-        public override async Task DoWork(IServiceScope scope, CancellationToken cancellationToken)
-        {
-
-            //var sp = scope.ServiceProvider;
-            var balanceService = scope.ServiceProvider.GetRequiredService<IBalanceService>();
             var Address = "TSTVYwFDp7SBfZk7Hrz3tucwQVASyJdwC7";
             await balanceService.GetApiAsync(Address);
-
         }
     }
 
