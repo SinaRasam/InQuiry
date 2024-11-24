@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InQuiry", "InQuery\InQuiry.csproj", "{460EEC09-9E92-4A03-A247-E0241B5492EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastracture", "Infrastracture\Infrastracture.csproj", "{0FD463E6-BDD2-4676-A2F2-BE903EFD39F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{450FAE9E-A7DD-4E87-91C8-451A1074869D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{460EEC09-9E92-4A03-A247-E0241B5492EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460EEC09-9E92-4A03-A247-E0241B5492EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460EEC09-9E92-4A03-A247-E0241B5492EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460EEC09-9E92-4A03-A247-E0241B5492EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD463E6-BDD2-4676-A2F2-BE903EFD39F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD463E6-BDD2-4676-A2F2-BE903EFD39F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD463E6-BDD2-4676-A2F2-BE903EFD39F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD463E6-BDD2-4676-A2F2-BE903EFD39F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450FAE9E-A7DD-4E87-91C8-451A1074869D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450FAE9E-A7DD-4E87-91C8-451A1074869D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450FAE9E-A7DD-4E87-91C8-451A1074869D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450FAE9E-A7DD-4E87-91C8-451A1074869D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2722731A-4420-4CEB-9EFA-D883BA54FD56}
+	EndGlobalSection
+EndGlobal
